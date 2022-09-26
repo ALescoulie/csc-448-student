@@ -30,3 +30,8 @@ def test_exercise_1():
         c += len(seq)
     avg2 = c/len(sequences)
     assert abs(avg1 - avg2) < 0.00001
+    
+def test_exercise_2():
+    sequences = ["ccacacca","cacccacacacccacacaccacaccacacaccacacca","cacacacaccacacccacacca","caccacaccacacccacacccaca"]
+    avg = Assignment1_helper.avg_length(sequences)
+    assert abs(avg - answers["answer_exercise_2"]) < 0.00001
