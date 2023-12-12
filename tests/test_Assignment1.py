@@ -2,7 +2,7 @@ import sys
 sys.path.append(".")
 
 # Import the student solutions
-import Assignment1_helper
+import Topic1_helper as helper
 
 import pathlib
 DIR=pathlib.Path(__file__).parent.absolute()
@@ -19,7 +19,7 @@ text = "atcaatgatcaacgtaagcttctaagcatgatcaaggtgctcacacagtttatccacaacctgagtggatga
 file = f"{DIR}/../data/GCF_000146045.2_R64_genomic.fna"
     
 def test_exercise_1():
-    headers,sequences = Assignment1_helper.read_fasta(file)
+    headers,sequences = helper.read_fasta(file)
     c = 0
     for seq in sequences:
         c += len(seq)
@@ -33,5 +33,5 @@ def test_exercise_1():
     
 def test_exercise_2():
     sequences = ["ccacacca","cacccacacacccacacaccacaccacacaccacacca","cacacacaccacacccacacca","caccacaccacacccacacccaca"]
-    avg = Assignment1_helper.avg_length(sequences)
+    avg = helper.avg_length(sequences)
     assert abs(avg - answers["answer_exercise_2"]) < 0.00001

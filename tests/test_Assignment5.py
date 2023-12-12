@@ -23,6 +23,7 @@ def test_exercise_1():
     assert (Assignment5_helper.compute_d(Assignment5_helper.G) == answers['exercise_1']).all().all()
 
 def test_exercise_2():
+    print(answers)
     assert Assignment5_helper.limb(Assignment5_helper.D,"v4") == answers['exercise_2']
 
 def test_exercise_3():

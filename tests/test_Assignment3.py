@@ -2,7 +2,7 @@ import sys
 sys.path.append(".")
 
 # Import the student solutions
-import Assignment3_helper
+import Topic3
 
 import pathlib
 DIR=pathlib.Path(__file__).parent.absolute()

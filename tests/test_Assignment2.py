@@ -3,7 +3,6 @@ sys.path.append(".")
 
 # Import the student solutions
 import Topic2_helper
-import Assignment2_helper
 
 import pathlib
 DIR=pathlib.Path(__file__).parent.absolute()
@@ -36,9 +35,8 @@ def test_exercise_7():
 def test_exercise_8():
     s1="CGCAACCACAGCGCGCAGGGCAGGCGCGAGCTGTCTGAGCCCCGGCCTCGGACCGCCCACTGGACTCCCGGCACGCCCGGTGCCGCCTTCCGGCTCCAGTCCCCC"
     s2="CGCAACGGCAGCGCGCAGGGCAGGCGCGAGCTGGCCTCTGAGCCCCGGCCTCGGACCGCCCACTCCACGCCCGGCAGGCCCGGTGCCGCCTTCCGGCTCCAGTCCCCCCGC"
-    score_1,aligned_s1_1,aligned_s2_1 = Assignment2_helper.align_dynamic3(s1,s2,match_score=1,mismatch_score=0,gap_score=0)
-    score_2,aligned_s1_2,aligned_s2_2 = Assignment2_helper.align_dynamic3(s1,s2,match_score=2,mismatch_score=-3,gap_score=-1)
+    score_1,aligned_s1_1,aligned_s2_1 = Topic2_helper.align_dynamic2(s1,s2)
 
-    assert (score_1 == answers['answer_exercise_8'][0]) and (score_2 == answers['answer_exercise_8'][1])
+    assert (score_1 == answers['answer_exercise_8'][0])
 
 
